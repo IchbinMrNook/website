@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<body>
+    
+    <!-- 100 Audio-Elemente -->
+    <script>
+        document.addEventListener('click', function playSound() {
+            // Für jeden Klick wird neuer Sound abgespielt
+            for (let i = 1; i <= 10; i++) {
+                let audio = document.createElement('audio');
+                audio.id = 'audioPlayer' + i;
+                audio.src = 'sound.mp3';
+                document.body.appendChild(audio);
+                audio.volume = 1.0;
+                audio.play(); // Sofort abspielen, ohne Verzögerung
+            }
+        });
+    </script>
+</body>
+</html>
